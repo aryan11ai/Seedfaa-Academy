@@ -1,108 +1,107 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+/* Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth; /* Smooth scroll behavior */
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth; /* Smooth scroll behavior */
+}
 
-  body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f4f4f4;
-  }
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  width: 100%;
+}
 
-  /* Modern Navbar Styles */
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    padding: 20px 40px;
-    background: linear-gradient(135deg, #667eea, #764ba2); /* Gradient background */
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; /* Slightly rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    z-index: 1000;
-    transition: all 0.3s ease;
-  }
+/* Modern Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #667eea, #764ba2); /* Gradient background */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; /* Slightly rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
 
-  .navbar .logo {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 2px;
-  }
-  .logo .a2{
-    display: none;
-  }
+.navbar .logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
 
+.logo .a2 {
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 30px;
+  position: relative; /* For underline effect */
+}
+
+/* Link Styles */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  position: relative;
+  transition: all .1s ease;
+  border-color: #764ba2;
+}
+
+/* Underline Animation */
+.nav-links a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover:after {
+  width: 100%; /* Expands underline */
+}
+
+/* Hover Effect */
+.nav-links a:hover {
+  color: #ffeb3b;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 4px 0;
+  border-radius: 5px; /* Rounded ends */
+  transition: all 0.3s ease;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
   .nav-links {
-    list-style: none;
-    display: flex;
-  }
-
-  .nav-links li {
-    margin-left: 30px;
-    position: relative; /* For underline effect */
-  }
-
-  /* Link Styles */
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    position: relative;
-    transition: all .1s ease;
-    border-color: #764ba2;
-  }
-
-  /* Underline Animation */
-  .nav-links a:after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 3px;
-    bottom: -5px;
-    left: 0;
-    background-color: #fff;
-    transition: width 0.3s ease;
-  }
-
-  .nav-links a:hover:after {
-    width: 100%; /* Expands underline */
-  }
-
-  /* Hover Effect */
-  .nav-links a:hover {
-    color: #ffeb3b;
-  }
-
-  /* Hamburger Menu */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .hamburger span {
-    height: 3px;
-    width: 25px;
-    background-color: #fff;
-    margin: 4px 0;
-    border-radius: 5px; /* Rounded ends */
-    transition: all 0.3s ease;
-  }
-
-  /* Mobile Menu Styles */
-  @media (max-width: 768px) {
-    .nav-links {
       position: fixed;
       top: 0;
       left: -100%;
@@ -114,158 +113,189 @@
       justify-content: center;
       align-items: center;
       transition: all 0.5s ease;
-    }
+  }
 
-    .logo{
+  .logo {
       display: flex;
-    }
-    .logo .a1{
+  }
+
+  .logo .a1 {
       display: none;
-    }
-    .logo .a2{
+  }
+
+  .logo .a2 {
       display: block;
-    }
+  }
 
-    .nav-links li {
+  .nav-links li {
       margin: 20px 0;
-    }
+  }
 
-    .hamburger {
+  .hamburger {
       display: flex;
-    }
+  }
 
-    /* Hamburger Icon Animation */
-    .navbar.active .hamburger span:nth-child(1) {
+  /* Hamburger Icon Animation */
+  .navbar.active .hamburger span:nth-child(1) {
       transform: rotate(-45deg) translate(-7px, 7px);
-    }
+  }
 
-    .navbar.active .hamburger span:nth-child(2) {
+  .navbar.active .hamburger span:nth-child(2) {
       opacity: 0;
-    }
+  }
 
-    .navbar.active .hamburger span:nth-child(3) {
+  .navbar.active .hamburger span:nth-child(3) {
       transform: rotate(45deg) translate(-7px, -7px);
-    }
+  }
 
-    /* Slide in Mobile Menu */
-    .navbar.active .nav-links {
+  /* Slide in Mobile Menu */
+  .navbar.active .nav-links {
       left: 0;
-    }
   }
-
-  /* Smooth transition for mobile view */
-  .nav-links a {
-    display: block;
-    text-align: center;
-    padding: 15px;
-    width: 100%;
-  }
-  .home{
-    height: 80vh;
-    width: 100%;
-    background-image: url('https://img.freepik.com/premium-photo/modern-blue-abstract-background-corporate-branding-design_1121645-6002.jpg?semt=ais_hybrid');
-    background-size: cover;
-    background-position: center;
-    padding: 0 0 10px 0;
-    color: white;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .home h1{
-    font-size: 40px;
-  }
-
-  a{
-    color: white;
-    text-decoration: none;
-  }
-
-  #about{
-    height: 40vh;
-    background: #333333;
-    color: white;
-    list-style: none;
-    display: flex;
-  }
-  #about div{
-    width: 20%;
-    margin-left: 10%;
-    margin-top: 40px;
-  }
-  #contact{
-    font-family: Arial, sans-serif;
-    background-color: #e0f0ff;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  .contact-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 80%;
-    max-width: 1100px;
 }
+
+/* Smooth transition for mobile view */
+.nav-links a {
+  display: block;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+}
+
+.home {
+  height: 80vh;
+  width: 100%;
+  background-image: url('https://img.freepik.com/premium-photo/modern-blue-abstract-background-corporate-branding-design_1121645-6002.jpg?semt=ais_hybrid');
+  background-size: cover;
+  background-position: center;
+  padding: 0 0 10px 0;
+  color: white;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 40px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+#about {
+  background: #333333;
+  color: white;
+  list-style: none;
+  display: flex;
+  padding-bottom: 20px;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+#about div {
+  width: 20%;
+  margin-left: 10%;
+  margin-top: 40px;
+}
+
+/* About Section Responsive */
+@media (max-width: 768px) {
+  #about div {
+      width: 80%; /* Stacking items on smaller screens */
+      margin-left: 10%; /* Center alignment */
+  }
+}
+
+#contact {
+  font-family: Arial, sans-serif;
+  background-color: #e0f0ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Allow height to adjust */
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+.contact-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  max-width: 1100px;
+}
+
 .contact-form {
-    width: 50%;
-    padding-right: 20px;
+  width: 50%;
+  padding-right: 20px;
 }
+
 .contact-form h2 {
-    color: #003366;
-    margin-bottom: 20px;
-    font-size: 28px;
+  color: #003366;
+  margin-bottom: 20px;
+  font-size: 28px;
 }
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
 }
+
 .contact-form button {
-    background-color: #00aaff;
-    color: white;
-    border: none;
-    padding: 14px 24px;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
 }
+
 .contact-form button:hover {
-    background-color: #0088cc;
+  background-color: #0088cc;
 }
+
 .contact-image {
-    width: 45%;
+  width: 45%;
 }
+
 .contact-image img {
-    width: 100%;
-    border-radius: 15px;
+  width: 100%;
+  border-radius: 15px;
 }
+
 /* Responsive design for smaller screens */
 @media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        padding: 20px;
-        width: 90%;
-    }
-    .contact-form, .contact-image {
-        width: 100%;
-    }
-    .contact-form {
-        padding-right: 0;
-    }
+  .contact-container {
+      flex-direction: column;
+      width: 80%;
+  }
+
+  .contact-form,
+  .contact-image {
+      width: 100%;
+  }
+
+  .contact-form {
+      padding-right: 0;
+  }
+
+  .home h1 {
+      font-size: 28px; /* Reduce heading size on smaller screens */
+  }
 }
