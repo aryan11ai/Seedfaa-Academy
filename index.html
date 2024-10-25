@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seedfaa Academy - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        .nav-links a.active {
+            color: #6728a1; /* Highlight active link */
+            border: 2px solid;
+            border-color: transparent;
+            border-bottom-color: #6728a1;
+        }
+        .hero {
+            height: 100vh; /* Full viewport height for the hero section */
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            margin-top: 20px; /* Offset for fixed navbar */
+        }
+        .progress-container {
+            width: 80%;
+            background-color: #e0e0e0;
+            border-radius: 25px;
+            overflow: hidden;
+            margin: 20px 0;
+            position: fixed;
+            top: 50px; /* Adjusted to sit below the navbar */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .progress-bar {
+            height: 10px;
+            background-color: #4caf50;
+            width: 0; /* Start with 0% width */
+            transition: width 0.2s ease;
+        }
+        .arrow-button {
+          background-color: #16a085;
+          color: white;
+          padding: 15px 30px;
+          font-size: 16px;
+          font-weight: bold;
+          border: none;
+          border-radius: 30px;
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          transition: background-color 0.3s ease;
+          width: 200px;
+      }
+  
+      .arrow-button::after {
+          content: '➡';
+          position: absolute;
+          right: 20px;
+          opacity: 0;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+  
+      .arrow-button:hover::after {
+          opacity: 1;
+          transform: translateX(5px);
+      }
+      .pulse-effect-button {
+        background-color: #e84393;
+        color: white;
+        padding: 15px 30px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: background-color 0.3s ease;
+        width: 200px;
+    }
+
+    .pulse-effect-button::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: width 0.4s ease, height 0.4s ease;
+    }
+
+    .pulse-effect-button:hover::after {
+        width: 200px;
+        height: 200px;
+    }
+
+    .pulse-effect-button:hover {
+        background-color: #d63031;
+    }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Seedfaa <span class="a1">Academy</span><span class="a2">...</span></div>
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </nav>
+
+
+    <br><br><br>
+
+    <div class="hero">
+        <section id="home" class="home">
+            <div>
+                <h1>Seedfaa is for you</h1>
+                <h2>Student for Seedfaa</h2>
+            </div>
+
+            <div>
+              
+                <button class="pulse-effect-button">Join Us</button>
+                <button class="arrow-button">Learn More</button>
+
+            </div>
+        </section><br>
+        <br>
+        <section id="services" style="height: 100vh; background-color: #f0f0f0;">
+            <h2>Our Services</h2>
+        </section>
+
+
+
+        <section id="contact" style="height: 100vh; background-color: #e0e0e0;">
+            
+    <div class="contact-container">
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
+                <button class="submit-btn" type="submit">Send Message</button>
+            </form>
+        </div>
+        <div class="contact-image">
+            <img src="https://images.websitebuilderexpert.com/wp-content/uploads/2023/02/13045442/Contact-Us-Page-Examples.jpg" alt="Illustration">
+        </div>
+    </div>
+
+        </section>
+
+
+
+
+        <section id="about">
+
+            <h2 style="padding: 10px;">About Us</h2>
+            <img src="" alt="">
+            <div class="column1about">
+                <h2>Navigation</h2>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </div>
+            <div class="column2about">
+                <h2>Join Us</h2>
+                <li><a href="https://www.youtube.com/@SeedfaaAcademy">Youtube</a></li>
+                <li><a href="https://www.facebook.com/Kumar19arvind89/">Facebook</a></li>
+                <li><a href="">Instragram</a></li>
+                <li><a href="">Twiter</a></li>
+                <li><a href="">Git hub</a></li>
+            </div>
+            <div class="column3about">
+                <h2>Product</h2>
+                <li><a href="">Study Notes</a></li>
+                <li><a href="">Study Videos</a></li>
+                <li><a href="">Study Books</a></li>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+
+
+        // Highlight active nav link
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            navLinks.forEach(link => {
+                const section = document.querySelector(link.getAttribute('href'));
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (scrollY >= sectionTop - sectionHeight / 3) {
+                    current = link.getAttribute('href');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+  ></script>
+
+  <script type="text/javascript">      (function () {
+      emailjs.init("Buzr1_RGjJFbao-4M");
+    })();
+  </script>
+  <script>
+      emailjs.sendForm("service_atikn2r", "template_7lerdsb", "#contact-form")
+      </script>
+
+      <script>
+          // listen to the form submission
+          document
+            .getElementById("contact-form")
+            .addEventListener("submit", function (event) {
+              event.preventDefault();
+    
+              const serviceID = "service_atikn2r";
+              const templateID = "template_7lerdsb";
+    
+              // send the email here
+              emailjs.sendForm(serviceID, templateID, this).then(
+                (response) => {
+                  console.log("SUCCESS!", response.status, response.text);
+                  alert("SUCCESS!");
+                },
+                (error) => {
+                  console.log("FAILED...", error);
+                  alert("FAILED...", error);
+                }
+              );
+            });
+        </script>
+
+</body>
+</html>
