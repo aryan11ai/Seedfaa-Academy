@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seedfaa Academy - Home</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://aryan11ai.github.io/Seedfaa-store/Seedfaa_logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <style>
 
         .nav-links a.active {
@@ -19,23 +22,6 @@
             align-items: center;
             background-color: #f0f0f0;
             margin-top: 20px; /* Offset for fixed navbar */
-        }
-        .progress-container {
-            width: 80%;
-            background-color: #e0e0e0;
-            border-radius: 25px;
-            overflow: hidden;
-            margin: 20px 0;
-            position: fixed;
-            top: 50px; /* Adjusted to sit below the navbar */
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        .progress-bar {
-            height: 10px;
-            background-color: #4caf50;
-            width: 0; /* Start with 0% width */
-            transition: width 0.2s ease;
         }
         .arrow-button {
           background-color: #16a085;
@@ -104,8 +90,9 @@
 </head>
 <body>
 
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="logo">Seedfaa <span class="a1">Academy</span><span class="a2">...</span></div>
+        <div class="img_logo"><img src="https://aryan11ai.github.io/Seedfaa-store/Seedfaa_logo.png" width="50px" alt=""></div>
         <ul class="nav-links">
           <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
@@ -131,14 +118,82 @@
 
             <div>
               
-                <button class="pulse-effect-button">Join Us</button>
-                <button class="arrow-button">Learn More</button>
+                <button class="pulse-effect-button" onclick="togglejoinus()">Join Us</button>
+                <button class="arrow-button" onclick="window.location.href = 'About_self.html'">Learn More</button>
 
             </div>
         </section><br>
         <br>
         <section id="services" style="height: 100vh; background-color: #f0f0f0;">
             <h2>Our Services</h2>
+
+            <div class="serv_section">
+                <div class="serv_card" id="serCard1">
+                    <h3>Our products</h3>
+                    <p>We provide you our study notes 1 to 10th class.</p>
+                    <p>Do you want to buy</p>
+                    <button type="button">Buy Now</button>
+                </div>
+        
+                <div class="serv_card" id="serCard2">
+                    <h3>Our Apps</h3>
+                    <p>Do you using android you can download our apps.</p>
+                    <p>Go to apps page</p>
+                    <button type="button" onclick="window.location.href = 'https://aryan11ai.github.io/Seedfaa-store/'">App</button>
+                </div>
+        
+                <div class="serv_card" id="serCard3">
+                    <h3>Our Classes</h3>
+                    <p>If you want to study you can watch our video.</p>
+                    <p>Click here to join your first class</p>
+                    <button type="button">Join</button>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="owenrs" class="owenrs">
+            <div class="serv_card_owner">
+                <div class="img">
+                    <img src="https://scontent.fpat1-2.fna.fbcdn.net/v/t39.30808-6/455158064_1543189959606297_7860192732758060302_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9Qddu8JVimIQ7kNvgEPYcsY&_nc_ht=scontent.fpat1-2.fna&_nc_gid=AG1Ooosrzpeuwlf7UQQ0HtH&oh=00_AYD7f68vX59sMYBwu8jGw54GhPcuGldngVqmclp52M2hRw&oe=67239F7E" 
+                    alt="owner" width="150px">
+                </div>
+                <div class="name_title">
+                    <h2>Arvind Kumar</h2>
+                    <h3>Company's owner</h3>
+                </div>
+            </div>
+        </section>
+
+        <section id="feature" class="feature">
+            <h2>Our Feature</h2>
+            <div class="feature-section">
+                <!-- Feature 1 -->
+                <div class="feature-box">
+                    <img loading="lazy" src="https://www.magnetbrains.com/wp-content/uploads/2021/07/02.png" alt="Quality Education">
+                    <p class="feature-title">100% Free<br>Quality Education</p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="feature-box">
+                    <img loading="lazy" src="https://www.magnetbrains.com/wp-content/uploads/2021/07/01.png" alt="Complete Syllabus">
+                    <p class="feature-title">100% Complete<br>Syllabus</p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="feature-box">
+                    <img loading="lazy" src="https://www.magnetbrains.com/wp-content/uploads/2023/03/Demo-Fonts_-1.png" alt="Doubt Solving">
+                    <p class="feature-title">Doubt Solving<br>Sessions</p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="feature-box">
+                    <img loading="lazy" src="https://www.magnetbrains.com/wp-content/uploads/2021/07/03.png" alt="Video Lectures">
+                    <p class="feature-title">Recorded Video<br>Lectures</p>
+                </div>
+            </div>
+        
+            <div class="mission">
+                <h2>Our Mission</h2>
+                <p>To provide quality education to everyone through innovative teaching methods and effective learning strategies.</p>
+            </div>
         </section>
 
 
@@ -164,33 +219,50 @@
 
 
 
-
         <section id="about">
-
             <h2 style="padding: 10px;">About Us</h2>
             <img src="" alt="">
             <div class="column1about">
                 <h2>Navigation</h2>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#services"><i class="fas fa-concierge-bell"></i> Services</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
             </div>
             <div class="column2about">
                 <h2>Join Us</h2>
-                <li><a href="https://www.youtube.com/@SeedfaaAcademy">Youtube</a></li>
-                <li><a href="https://www.facebook.com/Kumar19arvind89/">Facebook</a></li>
-                <li><a href="">Instragram</a></li>
-                <li><a href="">Twiter</a></li>
-                <li><a href="">Git hub</a></li>
+                <li><a href="https://www.youtube.com/@SeedfaaAcademy"><i class="fab fa-youtube"></i> Youtube</a></li>
+                <li><a href="https://www.facebook.com/Kumar19arvind89/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://www.instagram.com/seedfaa_academy?igsh=YzljYTk1ODg3Zg=="><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://twitter.com/seedfaaacademy?t=GjmMyTEbxAF3KWAFll4OPQ&s=09"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://github.com/aryan11ai/Seedfaa-Academy"><i class="fab fa-github"></i> GitHub</a></li>
             </div>
             <div class="column3about">
                 <h2>Product</h2>
-                <li><a href="">Study Notes</a></li>
-                <li><a href="">Study Videos</a></li>
-                <li><a href="">Study Books</a></li>
+                <li><a href="#services" onclick="studyNotesAc()"><i class="fas fa-book"></i> Study Notes</a></li>
+                <li><a href="#services" onclick="studyVideosAc()"><i class="fas fa-video"></i> Study Videos</a></li>
+                <li><a href=""><i class="fas fa-book-open"></i> Study Books</a></li>
             </div>
+            <div class="column3about">
+                <h2>Contact us</h2>
+            <li><a href="https://wa.me/9110029392"><i class="fab fa-whatsapp"></i>+91 9110029392</a></li>
+        </div>
         </section>
+        
+        
+    </div>
+
+    <div class="action1" id="actionjoine" onclick="togglejoinus()">
+        <div class="act1">
+            <div>
+            <h2>Join on</h2>
+            <li><a href="https://www.youtube.com/@SeedfaaAcademy">Youtube</a></li>
+            <li><a href="https://www.facebook.com/Kumar19arvind89/">Facebook</a></li>
+            <li><a href="https://www.instagram.com/seedfaa_academy?igsh=YzljYTk1ODg3Zg==">Instragram</a></li>
+            <li><a href="https://twitter.com/seedfaaacademy?t=GjmMyTEbxAF3KWAFll4OPQ&s=09">Twiter</a></li>
+            <li><a href="https://github.com/aryan11ai/Seedfaa-Academy">Git hub</a></li>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -271,6 +343,60 @@
               );
             });
         </script>
+
+        <script>
+            function togglejoinus() {
+                const joinus = document.getElementById("actionjoine");
+                if (joinus.style.display === "none") {
+                    joinus.style.display = "flex"
+                } else{
+                    joinus.style.display = "none"
+                }
+            }
+        </script>
+
+
+
+<!--Heighlight-->
+<script>
+    function studyNotesAc() {
+        const serCard1 = document.getElementById('serCard1');
+
+            serCard1.style.backgroundColor = 'lightyellow';
+
+            // Set a timeout to revert the color after 2 seconds
+            setTimeout(() => {
+                serCard1.style.backgroundColor = 'white';
+            }, 2000); // 2000 milliseconds = 2 seconds
+    }
+    function studyVideosAc() {
+        const serCard3 = document.getElementById('serCard3');
+
+            serCard3.style.backgroundColor = 'lightyellow';
+
+            // Set a timeout to revert the color after 2 seconds
+            setTimeout(() => {
+                serCard3.style.backgroundColor = 'white';
+            }, 2000); // 2000 milliseconds = 2 seconds
+    }
+</script>
+
+<script>
+    let lastScrollY = window.scrollY;
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+  if (window.scrollY > lastScrollY) {
+    // Scroll down, hide navbar
+    navbar.classList.add("hidden");
+  } else {
+    // Scroll up, show navbar
+    navbar.classList.remove("hidden");
+  }
+  lastScrollY = window.scrollY;
+});
+
+</script>
 
 </body>
 </html>
