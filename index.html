@@ -165,6 +165,16 @@
             </div>
         </section>
 
+        <section id="updates" class="updates">
+            <div class="update">
+                <p>New</p>
+                <h1>Quiz</h1>
+                <div class="btn">
+                    <button>Start Now</button>
+                </div>
+            </div>
+        </section>
+
         <section id="feature" class="feature">
             <h2>Our Feature</h2>
             <div class="feature-section">
@@ -196,11 +206,14 @@
             </div>
         </section>
 
+        <section id="games" class="games">
+
+        </section>
 
 
         <section id="contact" style="height: 100vh; background-color: #e0e0e0;">
             
-    <div class="contact-container">
+    <div class="contact-container" data-name="ABCDEMGHIJKLMNOPQRSTUVWXYZ">
         <div class="contact-form">
             <h2>Contact Us</h2>
             <form id="contact-form">
@@ -396,6 +409,64 @@
   lastScrollY = window.scrollY;
 });
 
+</script>
+<script>
+    function searchApps() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const suggestionsContainer = document.getElementById('suggestionsContainer');
+        const apps = document.querySelectorAll('.app');
+    
+        // Clear previous suggestions
+        suggestionsContainer.innerHTML = '';
+        suggestionsContainer.style.display = 'none';
+    
+        if (input) {
+            const filteredApps = Array.from(apps).filter(app => {
+                const appName = app.getAttribute('data-name').toLowerCase();
+                return appName.includes(input);
+            });
+    
+            if (filteredApps.length > 0) {
+                suggestionsContainer.style.display = 'block';
+                filteredApps.forEach(app => {
+                    const appName = app.getAttribute('data-name');
+                    const suggestion = document.createElement('div');
+                    suggestion.classList.add('suggestion');
+                    suggestion.innerHTML = highlightMatch(appName, input); // Highlight matched text
+                    suggestion.onclick = () => {
+                        // Clear suggestions and filter displayed apps
+                        clearSuggestions();
+                        displaySelectedApp(appName);
+                    };
+                    suggestionsContainer.appendChild(suggestion);
+                });
+            }
+        }
+    }
+    
+    function highlightMatch(text, input) {
+        const regex = new RegExp(`(${input})`, 'gi'); // Create a regex for the input
+        return text.replace(regex, '<span class="highlight">$1</span>'); // Highlight matched part
+    }
+    
+    function clearSuggestions() {
+        const suggestionsContainer = document.getElementById('suggestionsContainer');
+        suggestionsContainer.innerHTML = '';
+        suggestionsContainer.style.display = 'none';
+    }
+    
+    function displaySelectedApp(selectedApp) {
+        const apps = document.querySelectorAll('.app');
+        apps.forEach(app => {
+            if (app.getAttribute('data-name').toLowerCase() === selectedApp.toLowerCase()) {
+                app.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                app.style.border = '2px solid #6a11cb'; // Highlight selected app
+            } else {
+                app.style.display = 'none'; // Hide other apps
+            }
+        });
+    }
+    
 </script>
 
 </body>
