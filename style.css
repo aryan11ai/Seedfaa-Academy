@@ -48,6 +48,52 @@ main {
   letter-spacing: 2px;
 }
 
+.search-bar {
+  margin: 30px auto;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s ease;
+}
+
+.search-bar input:focus {
+  border: 2px solid #6a11cb;
+  outline: none;
+}
+
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+}
+
+.suggestion {
+  padding: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.suggestion:hover {
+  background: #f0f0f0;
+}
+
 .logo .a2 {
   display: none;
 }
@@ -553,4 +599,39 @@ a {
 .feature h2{
   color: #003366;
   margin-bottom: 20px;
+}
+
+#updates{
+  height: 40vh;
+  background-color: #c6e2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#updates div.update{
+  min-width: 300px;
+  background-color: #f3eded;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.692);
+}
+#updates div.update p{
+  background-color: red;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -10px;
+  padding: 5px;
+  border-bottom-right-radius: 20px;
+}
+#updates div.update h1{
+  margin-top: 20px;
+}
+#updates div button{
+  background-color: #007bff;
+  border: 0;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  margin-left: auto;
+  float: right;
 }
