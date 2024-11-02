@@ -664,3 +664,17 @@ a {
       width: 100%;
   }
 }
+.desktop_ad{
+  display: block;
+}
+.mobile_ad{
+  display: none;
+}
+@media (max-width: 500px) {
+  .desktop_ad{
+    display: none;
+  }
+  .mobile_ad{
+    display: block;
+  }
+}
