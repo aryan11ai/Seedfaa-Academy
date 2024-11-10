@@ -156,7 +156,7 @@
         <section id="owenrs" class="owenrs">
             <div class="serv_card_owner">
                 <div class="img">
-                    <img src="https://github.com/aryan11ai/Seedfaa-Academy/blob/main/owner%20picture.png?raw=true" 
+                    <img src="https://github.com/aryan11ai/Seedfaa-Academy/blob/main/owner%20picture.png" 
                     alt="owner" width="150px">
                 </div>
                 <div class="name_title">
@@ -173,6 +173,13 @@
                     <h3>1, 2, 3... 10 all class avilable</h3>
                     <div>
                         <button onclick="window.location.href = 'https://aryan11ai.github.io/Quiz/'">Start Now</button>
+                    </div>
+                </div>
+                <div class="update">
+                    <h2>P Answer Sheet</h2>
+                    <h3>1, 2, 3... 10 all class avilable</h3>
+                    <div>
+                        <button onclick="window.location.href = 'https://aryan11ai.github.io/Quiz-Answer/'">View Now</button>
                     </div>
                 </div>
             </div>
@@ -210,32 +217,6 @@
         </section>
 
         <section id="games" class="games">
-            <div class="desktop_ad">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1888567366005105"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-ey+i-1g-4q+e1"
-     data-ad-client="ca-pub-1888567366005105"
-     data-ad-slot="4825967256"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-            </div>
-            <div class="mobile_ad">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1888567366005105"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="fluid"
-     data-ad-layout-key="-ex+i-1g-4q+e1"
-     data-ad-client="ca-pub-1888567366005105"
-     data-ad-slot="3188890872"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-            </div>
         </section>
 
 
@@ -248,7 +229,7 @@
                 <input type="text" id="name" name="name" placeholder="Name" required>
                 <input type="email" id="email" name="email" placeholder="Email" required>
                 <textarea id="message" name="message" placeholder="Message" rows="5" required></textarea>
-                <button class="submit-btn" type="submit">Send Message</button>
+                <button class="submit-btn" onclick="sendmessage()">Send Message</button>
             </form>
         </div><br>
         <div class="contact-image">
@@ -306,7 +287,19 @@
         </div>
     </div>
 
-    <script>
+    <script defer>
+        function sendmessage()  {
+      
+          const nameUser = document.getElementById('name');
+          const email = document.getElementById('email');
+          const messageInput = document.getElementById('message')
+      
+          const message = `Name: ${nameUser.value}, Email: ${email.value}, Message: ${messageInput.value}`;
+          window.location.href = `https://wa.me/9110029392?text=${encodeURIComponent(message)}`;
+        }
+      </script>
+
+    <script defer>
         function toggleMenu() {
             const navbar = document.querySelector('.navbar');
             navbar.classList.toggle('active');
@@ -338,30 +331,23 @@
         });
     </script>
 
-    <script
+    <script defer
     src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"
   ></script>
-  <script
+  <script defer
     src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"
   ></script>
-  <script
+  <script defer
     type="text/javascript"
     src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
   ></script>
 
-  <script type="text/javascript">      (function () {
-      emailjs.init("Buzr1_RGjJFbao-4M");
-    })();
-  </script>
-  <script>
-      emailjs.sendForm("service_atikn2r", "template_7lerdsb", "#contact-form")
-      </script>
 
-      <script>
+      <script defer>
           // listen to the form submission
           document
             .getElementById("contact-form")
@@ -385,7 +371,7 @@
             });
         </script>
 
-        <script>
+        <script defer>
             function togglejoinus() {
                 const joinus = document.getElementById("actionjoine");
                 if (joinus.style.display === "none") {
@@ -496,81 +482,7 @@
     }
     
 </script>
-<script>
-    // Check localStorage to see if the message should be hidden
-    if (localStorage.getItem('blinkerHidden') === 'true') {
-        document.getElementById('alrtBlinker1').style.display = 'none';
-    }
-    if (localStorage.getItem('blinkerHidden') === 'true') {
-        document.getElementById('alrtBlinker2').style.display = 'none';
-    }
-    if (localStorage.getItem('blinkerHidden') === 'true') {
-        document.getElementById('alrtBlinker3').style.display = 'none';
-    }
-    if (localStorage.getItem('blinkerHidden') === 'true') {
-        document.getElementById('alrtBlinker4').style.display = 'none';
-    }
-    if (localStorage.getItem('blinkerHidden') === 'true') {
-        document.getElementById('alrtBlinker5').style.display = 'none';
-    }
-    if (localStorage.getItem('blinkerHidden') === 'true') {
-        document.getElementById('alrtBlinker6').style.display = 'none';
-    }
-    if (localStorage.getItem('blinkerHidden') === 'true') {
-        document.getElementById('alrtBlinker7').style.display = 'none';
-    }
-    if (localStorage.getItem('blinkerHidden') === 'true') {
-        document.getElementById('alrtBlinker8').style.display = 'none';
-    }
-    if (localStorage.getItem('blinkerHidden') === 'true') {
-        document.getElementById('alrtBlinker9').style.display = 'none';
-    }
-    if (localStorage.getItem('blinkerHidden') === 'true') {
-        document.getElementById('alrtBlinker10').style.display = 'none';
-    }
 
-    // Event listener for the button
-    document.getElementById('updathideblinker1').onclick = function() {
-        document.getElementById('alrtBlinker1').style.display = 'none';
-        localStorage.setItem('blinkerHidden', 'true'); // Set flag in localStorage
-    };
-    document.getElementById('updathideblinker2').onclick = function() {
-        document.getElementById('alrtBlinker2').style.display = 'none';
-        localStorage.setItem('blinkerHidden', 'true'); // Set flag in localStorage
-    };
-    document.getElementById('updathideblinker3').onclick = function() {
-        document.getElementById('alrtBlinker3').style.display = 'none';
-        localStorage.setItem('blinkerHidden', 'true'); // Set flag in localStorage
-    };
-    document.getElementById('updathideblinker4').onclick = function() {
-        document.getElementById('alrtBlinker4').style.display = 'none';
-        localStorage.setItem('blinkerHidden', 'true'); // Set flag in localStorage
-    };
-    document.getElementById('updathideblinker5').onclick = function() {
-        document.getElementById('alrtBlinker5').style.display = 'none';
-        localStorage.setItem('blinkerHidden', 'true'); // Set flag in localStorage
-    };
-    document.getElementById('updathideblinker6').onclick = function() {
-        document.getElementById('alrtBlinker6').style.display = 'none';
-        localStorage.setItem('blinkerHidden', 'true'); // Set flag in localStorage
-    };
-    document.getElementById('updathideblinker7').onclick = function() {
-        document.getElementById('alrtBlinker7').style.display = 'none';
-        localStorage.setItem('blinkerHidden', 'true'); // Set flag in localStorage
-    };
-    document.getElementById('updathideblinker8').onclick = function() {
-        document.getElementById('alrtBlinker8').style.display = 'none';
-        localStorage.setItem('blinkerHidden', 'true'); // Set flag in localStorage
-    };
-    document.getElementById('updathideblinker9').onclick = function() {
-        document.getElementById('alrtBlinker9').style.display = 'none';
-        localStorage.setItem('blinkerHidden', 'true'); // Set flag in localStorage
-    };
-    document.getElementById('updathideblinker10').onclick = function() {
-        document.getElementById('alrtBlinker10').style.display = 'none';
-        localStorage.setItem('blinkerHidden', 'true'); // Set flag in localStorage
-    };
-</script>
 
 </body>
 </html>
