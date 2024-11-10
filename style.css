@@ -630,6 +630,8 @@ a {
   background-color: #fff;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-left: 20px;
+  margin-top: 50px;
 }
 
 .update:hover {
